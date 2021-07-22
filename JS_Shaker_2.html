@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Shaker 2</title>
+
+    <style>
+        html {
+            background-color: antiquewhite;
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background-color: rgb(209, 209, 209);
+            height: 100%;
+            width: 100%;
+        }
+        #picDiv {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     Hello world!
+    <div id="picDiv">  
+        <svg width="700" height="200">
+            <rect width="50" height="50" style="fill:rgb(0,0,255);stroke-width:3;" />
+          </svg>
+    </div>
 </body>
 </html>
