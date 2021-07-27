@@ -15,27 +15,28 @@
             background-color: rgb(209, 209, 209);
             height: 100%;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         #picDiv {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* position: absolute; */
+            top: 50%;
+            right: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
         }
-        svg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        p {
+            position: absolute;
+            top: 5%;
+            left: 5%;
         }
+
     </style>
 </head>
 <body>
-    Hello world!
-    <div id="picDiv">  
-        <svg width="700" height="200">
-            <rect width="50" height="50" style="fill:rgb(0,0,255);stroke-width:3;" />
-          </svg>
-    </div>
+    <div id="picDiv"></div>
+    <p>Hello world!</p>
 </body>
 </html>
