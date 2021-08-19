@@ -62,7 +62,7 @@
                 console.log("DingDong")
 
 
-                coordinates.innerHTML = x;
+                coordinates.innerHTML = "Coordinates: " + x;
                 if (x >= 100)
                     document.getElementById("picDiv").style.transform = 'translateX(' + x * movementFactor + 'px)';
                 if (x <= 100)
@@ -77,6 +77,6 @@
     <div id="picDiv">
         <div id="innerDiv"></div>
     </div>
-    <p id="coordinates"> "Hello world!" </p>
+    <p id="coordinates"></p>
 </body>
 </html>
