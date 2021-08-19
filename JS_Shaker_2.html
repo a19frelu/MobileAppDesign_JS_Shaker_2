@@ -10,11 +10,14 @@
             background-color: antiquewhite;
             height: 100%;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         body {
             background-color: rgb(209, 209, 209);
-            height: 100%;
-            width: 100%;
+            height: 80%;
+            width: 80%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,14 +32,38 @@
         }
         p {
             position: absolute;
-            top: 5%;
-            left: 5%;
+            top: 15%;
+            left: 15%;
+            font-size: calc(10px + 0.3vw);
+            transform: translateX(100px);
         }
 
     </style>
+    <script src="https://raw.githack.com/HGustavs/Shaker.js/master/shaker.js"></script>
+    <script>
+
+        function initShaker() {
+            shaker.on("tilt", function (edata) {
+                var picDiv = document.getElementById("picDiv");
+                var coordinates = document.getElementById("coordinates");
+                var x = edata.alpha;
+                var movementFactor = 0.5;
+                console.log("DingDong")
+
+
+                coordinates.innerHTML = x;
+                if (x >= 100)
+                    document.getElementById("picDiv").style.transform = 'translateX(' + x * movementFactor + 'px)';
+                if (x <= 100)
+                    document.getElementById("picDiv").style.transform = 'translateX(' + (-x) * movementFactor + 'px)';
+                
+            });
+        }
+    
+    </script>
 </head>
-<body>
+<body onload="initShaker()">
     <div id="picDiv"></div>
-    <p>Hello world!</p>
+    <p id="coordinates"> "Hello world!" </p>
 </body>
 </html>
