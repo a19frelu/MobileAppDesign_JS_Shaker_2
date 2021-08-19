@@ -29,6 +29,17 @@
             width: 100px;
             height: 100px;
             background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #innerDiv {
+            top: 50%;
+            right: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+
         }
         p {
             position: absolute;
@@ -63,7 +74,9 @@
     </script>
 </head>
 <body onload="initShaker()">
-    <div id="picDiv"></div>
+    <div id="picDiv">
+        <div id="innerDiv"></div>
+    </div>
     <p id="coordinates"> "Hello world!" </p>
 </body>
 </html>
